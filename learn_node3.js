@@ -4,10 +4,6 @@ var fs = require('fs');
 var fileCharArray = [];
 var pathBufferObject = [];
 
-function callback (error, data){
-
-}
-
 
 pathBufferObject = process.argv;
 
