@@ -6,4 +6,4 @@ var pathBufferObject = [];
 
 pathBufferObject = process.argv;
 
-readAndFilter(pathBufferObject);
+readAndFilter(pathBufferObject[2],pathBufferObject[3]);
