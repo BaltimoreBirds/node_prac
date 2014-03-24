@@ -5,7 +5,6 @@ var pathBufferObject = [];
 var bl = new BufferList();
 
 pathBufferObject = process.argv;
-var concat_response = [];
 
 http.get(pathBufferObject[2], function(response){
 	response.pipe(BufferList(function(err, data){
