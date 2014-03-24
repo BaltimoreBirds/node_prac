@@ -5,14 +5,18 @@ var pathBufferObject = [];
 var bl = new BufferList();
 
 pathBufferObject = process.argv;
+var concat_response = [];
 
 http.get(pathBufferObject[2], function(response){
-	bl.pipe(response.toString());
-	console.log(bl);
-	// response.on("end", function(data){
-	// 	return bl;
-	// })
-	// bl.pipe(BufferList(function(err,data){
-	// 	data.toString();
-	// }))
+	response.pipe(BufferList(function(err, data){
+
+		if(err){
+			throw err;
+		}else{
+			console.log(data.length);
+			console.log(data.toString());
+
+			
+		}
+	}))
 })
